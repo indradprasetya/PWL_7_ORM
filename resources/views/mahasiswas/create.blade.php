@@ -15,14 +15,14 @@
                             </ul>
                         </div>
                     @endif
-                    <form method="post" action="{{ route('mahasiswa.store') }}" id="myForm"> @csrf <div
+                    <form method="post" action="{{ route('mahasiswas.store') }}" id="myForm"> @csrf <div
                             class="form-group"> <label for="Nim">Nim</label> <input type="text" name="Nim"
                                 class="form-control" id="Nim" aria-describedby="Nim"> </div>
                         <div class="form-group"> <label for="Nama">Nama</label> <input type="Nama" name="Nama"
                                 class="form-control" id="Nama" aria-describedby="Nama"> </div>
                         <div class="form-group"> <label for="Kelas">Kelas</label>
                             <input type="Kelas" name="Kelas" class="form-control" id="Kelas"
-                                aria-describedby="password">
+                                aria-describedby="password"><div class="card-body"> <ul class="list-group list-group-flush"> <li class="list-group-item"><b>Nim: </b>{{$Mahasiswa->Nim}}</li> <li class="list-group-item"><b>Nama: </b>{{$Mahasiswa->Nama}}</li> <li class="list-group-item"><b>Kelas: </b>{{$Mahasiswa->Kelas}}</li> <li class="list-group-item"><b>Jurusan: </b>{{$Mahasiswa->Jurusan}}</li> <li class="list-group-item"><b>No_Handphone: </b>{{$Mahasiswa->No_Handphone}}</li> </ul> </div> <a class="btn btn-success mt-3" href="{{ route('mahasiswas.index') }}">Kembali</a> </div> </div> </div> @endsection
                         </div>
                         <div class="form-group"> <label for="Jurusan">Jurusan</label> <input type="Jurusan" name="Jurusan"
                                 class="form-control" id="Jurusan" aria-describedby="Jurusan"> </div>
