@@ -46,7 +46,7 @@ class MahasiswaController extends Controller
         Mahasiswa::create($request->all());
 
         //jika data berhasil ditambahkan, akan kembali ke halaman utama
-        return redirect()->route('mahasiswa.index')->with('success', 'Mahasiswa Berhasil Ditambahkan');
+        return redirect()->route('mahasiswas.index')->with('success', 'Mahasiswa Berhasil Ditambahkan');
     }
 
     /**
@@ -56,7 +56,7 @@ class MahasiswaController extends Controller
     {
         //menampilkan detail data dengan menemukan/berdasarkan Nim Mahasiswa
         $Mahasiswa = Mahasiswa::find($Nim);
-        return view('mahasiswa.detail', compact('Mahasiswa'));
+        return view('mahasiswas.detail', compact('Mahasiswa'));
     }
 
     /**
@@ -66,7 +66,7 @@ class MahasiswaController extends Controller
     {
         //menampilkan detail data dengan menemukan berdasarkan Nim Mahasiswa untuk diedit
         $Mahasiswa = Mahasiswa::find($Nim);
-        return view('mahasiswa.edit', compact('Mahasiswa'));
+        return view('mahasiswas.edit', compact('Mahasiswa'));
     }
 
     /**
@@ -87,7 +87,7 @@ class MahasiswaController extends Controller
         Mahasiswa::find($Nim)->update($request->all());
 
         //jika data berhasil diupdate, akan kembali ke halaman utama
-        return redirect()->route('mahasiswa.index')->with('success', 'Mahasiswa Berhasil Diupdate');
+        return redirect()->route('mahasiswas.index')->with('success', 'Mahasiswa Berhasil Diupdate');
     }
 
     /**
@@ -97,6 +97,6 @@ class MahasiswaController extends Controller
     {
         //fungsi eloquent untuk menghapus data
         Mahasiswa::find($Nim)->delete();
-        return redirect()->route('mahasiswa.index')->with('success', 'Mahasiswa Berhasil Dihapus');
+        return redirect()->route('mahasiswas.index')->with('success', 'Mahasiswa Berhasil Dihapus');
     }
 }
